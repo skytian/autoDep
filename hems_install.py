@@ -520,13 +520,16 @@ def install_ftp():
 	platform_type = platform.linux_distribution()[0]
 	if platform_type.lower() == 'Ubuntu'.lower():
 		cmd = 'apt-get install vsftpd'
+		echo_exe(cmd, err_list)
 	elif platform_type.lower() == 'Centos'.lower():
 		cmd = 'yum -y install vsftpd'
+		echo_exe(cmd, err_list)
 	else:
 		print 'can not support currently!'
 		sys.exit()
 	config_ftp()
 	install_alarm_mp3()
+	print err_list
 ##############################################################################
 
 

@@ -33,9 +33,8 @@ def write_nms_property():
 	'[Mysql]','db.mysql.driverCls=com.mysql.jdbc.Driver','db.mysql.hostname=172.0.5.207','db.mysql.port=3306','db.mysql.name=hemsdb','db.mysql.username=root','db.mysql.password=casa',
 	'[MongoDB]','db.mongo.hostname=localhost','db.mongo.name=hemsdb',
 	'[ThreadPool]','nms.threadpool.corepoolsize = 64','nms.threadpool.maxpoolsize = 64',
-	'[LogPatterns]','hems = logs/hems.%d{yyyy-MM-dd}.log','hemsLogName = logs/hems.log','hemsMaxHistory = 30',
-	'[SecurityLog]','security = logs/hems-audit.%d{yyyy-MM-dd}.log','securityLogName = logs/hems-security.log','securityMaxHistory = 30',
-	'[CwmpLog]','cwmp = ogs/hems-agent.%d{yyyy-MM-dd}.log','cwmpLogName = logs/hems-cwmp.log','cwmpMaxHistory = 30'
+	'[LogPatterns]','hemsLogAddr = /opt/casa/logs/', 'maxHistory=30',
+	'[DeviceLog]','deviceLogAddr=/opt/casa/ftp/files/deviceLog/'
 	]
 	if not os.path.exists('/etc/casanms/'):
 		os.mkdir('/etc/casanms')	
