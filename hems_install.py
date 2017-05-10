@@ -471,7 +471,7 @@ def config_ftp():
 		if not str_cnf.find('#local_enable=YES') == -1:
 			f.write('local_enable=YES\n')
 		elif not str_cnf.find('#write_enable=YES') == -1:
-			f.write('write_enabel=YES\n')
+			f.write('write_enable=YES\n')
 		elif not str_cnf.find('userlist_deny=NO\n') == -1:
 			flag = 1
 		else:
